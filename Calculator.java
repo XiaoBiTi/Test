@@ -18,7 +18,7 @@ public class Calculator {
         int height = screenSize.height;
         int width = screenSize.width;
 
-        JFrame frame = new JFrame("ËÆ°ÁÆóÂô®");
+        JFrame frame = new JFrame("º∆À„∆˜");
         frame.setBounds((width-320)/2,(height-450)/2,320,450);
         frame.setResizable(false);
         frame.setLayout(null);
@@ -47,27 +47,27 @@ public class Calculator {
         button2.setBackground(Color.WHITE);
         button2.setBounds(153,100,73,50);
 
-        JButton button3 = new JButton("‚Üê");
+        JButton button3 = new JButton("Backspace");
         button3.setFont(new Font(null,1,16));
         button3.setBackground(Color.WHITE);
         button3.setBounds(230,100,73,50);
 
-        JButton button4 = new JButton("¬π/x");
+        JButton button4 = new JButton("1/x");
         button4.setFont(new Font(null,0,16));
         button4.setBackground(Color.WHITE);
         button4.setBounds(1,152,73,50);
 
-        JButton button5 = new JButton("x¬≤");
+        JButton button5 = new JButton("x^2");
         button5.setFont(new Font(null,0,16));
         button5.setBackground(Color.WHITE);
         button5.setBounds(76,152,73,50);
 
-        JButton button6 = new JButton("x^¬Ω");
+        JButton button6 = new JButton("x^0.5");
         button6.setFont(new Font(null,0,16));
         button6.setBackground(Color.WHITE);
         button6.setBounds(153,152,73,50);
 
-        JButton button7 = new JButton("√∑");
+        JButton button7 = new JButton("°¬");
         button7.setFont(new Font(null,0,16));
         button7.setBackground(Color.WHITE);
         button7.setBounds(230,152,73,50);
@@ -87,7 +87,7 @@ public class Calculator {
         button10.setBackground(Color.WHITE);
         button10.setBounds(153,204,73,50);
 
-        JButton button11 = new JButton("√ó");
+        JButton button11 = new JButton("°¡");
         button11.setFont(new Font(null,0,16));
         button11.setBackground(Color.WHITE);
         button11.setBounds(230,204,73,50);
@@ -182,111 +182,198 @@ public class Calculator {
 
         CalculatorActionEvent calculatorActionEvent = new CalculatorActionEvent();
 
-        button8.addActionListener(new ActionListener() {
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button1,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button2,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button3,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+        
+		button4.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button4,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+
+		button5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button5,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button6.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button6,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button7.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button7,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 calculatorActionEvent.CalculatorActionEvent(button8,label,label1);
                 calculatorActionEvent.ButtonAction();
             }
         });
-
-        button9.addActionListener(new ActionListener() {
+		
+		button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 calculatorActionEvent.CalculatorActionEvent(button9,label,label1);
                 calculatorActionEvent.ButtonAction();
             }
         });
-
-        button10.addActionListener(new ActionListener() {
+		
+		button10.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 calculatorActionEvent.CalculatorActionEvent(button10,label,label1);
                 calculatorActionEvent.ButtonAction();
             }
         });
-
-        button12.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button12,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button13.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button13,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button14.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button14,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button16.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button16,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button17.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button17,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button18.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button18,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button21.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button21,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button22.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button22,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-        button19.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                calculatorActionEvent.CalculatorActionEvent(button19,label,label1);
-                calculatorActionEvent.ButtonAction();
-            }
-        });
-
-
-        button11.addActionListener(new ActionListener() {
+		
+		button11.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 calculatorActionEvent.CalculatorActionEvent(button11,label,label1);
                 calculatorActionEvent.ButtonAction();
             }
         });
-
+		
+		button12.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button12,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button13.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button13,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button14.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button14,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button15.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button15,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button16.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button16,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button17.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button17,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button18.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button18,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button19.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button19,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button20.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button20,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button21.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button21,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button22.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button22,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
+		button23.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                calculatorActionEvent.CalculatorActionEvent(button23,label,label1);
+                calculatorActionEvent.ButtonAction();
+            }
+        });
+		
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 

@@ -29,30 +29,44 @@ public class CalculatorActionEvent {
             }
         } else {
             if (temp.equals("") && button.getText() != "C" && button.getText() != "CE" && button.getText() != "=" && button.getText() != "Backspace") {
-                temp = button.getText().toString();
+                temp = button.getText();
                 label.setText(label1.getText() + button.getText());
                 result = Double.parseDouble(label1.getText());
 				System.out.println(label1.getText());
                 label1.setText("0");
             } else {
-                switch (temp) {
+				if(temp.equals("+")){
+					result += Double.parseDouble(label1.getText());
+				}else if(temp.equals("×")){
+					result *= Double.parseDouble(label1.getText());
+				}else if(temp.equals("-")){
+					result -= Double.parseDouble(label1.getText());
+				}else if(temp.equals("+/-")){
+					result = -Double.parseDouble(label1.getText());
+				}else if(temp.equals("÷")){
+					result /= Double.parseDouble(label1.getText());
+				}else if(temp.equals("x^0.5"))
+				
+				
+				
+                switch (temp.equals) {
                     case "+":
-                        result += Double.parseDouble(label1.getText());
+                        
                         break;
                     case "×":
-                        result *= Double.parseDouble(label1.getText());
-						System.out.println(label1.getText());
+                       
+						System.out.println(0.0);
                         break;
 					case "-":
-                        result -= Double.parseDouble(label1.getText());
+                        
 						
                         break;
                     case "+/-":
-                        result = -Double.parseDouble(label1.getText());
+                        
 						
                         break;
 					case "÷":
-                        result /= Double.parseDouble(label1.getText());
+                        
 						
                         break;
                     case "x^0.5":
@@ -71,7 +85,7 @@ public class CalculatorActionEvent {
 						result %= Double.parseDouble(label1.getText());
 						break;	
 					default:
-						if(button.getText() == "=" && temp != ""){
+						if(button.getText().equals("=") && temp != ""){
 							label.setText(label.getText() + label1.getText());
 							label1.setText(String.valueOf(result));
 							
@@ -79,15 +93,15 @@ public class CalculatorActionEvent {
 							temp = "=";
 						}else{
 					
-							if(button.getText() == "CE"){
+							if(button.getText().equals("CE")){
 								label.setText("");
 								label1.setText("0");
 								result = 0; 
 								temp = "CE";
-							}else if(button.getText()  == "C"){
+							}else if(button.getText().equals("C")){
 								label1.setText("0");
 								temp = "C";
-							}else if(button.getText()  == "Backspace"){
+							}else if(button.getText().equals("Backspace")){
 								label1.setText(label1.getText().substring(0,label1.getText().length()-2));
 								temp = "Backspace";
 							}else{
